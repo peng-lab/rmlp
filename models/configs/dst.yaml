@@ -1,0 +1,42 @@
+model:
+  size: small
+  patch_size: 14 #patch size for tokenizer
+  hidden_size: 384 #token dimension
+  mlp_ratio: 4
+  num_attention_heads: 6
+  num_hidden_layers: 12
+  qkv_bias: True
+  num_blocks: 2
+  rmlp: True
+  amplitude: 5 #amplitude for RMLP
+  use_dinov2: True #initializing with DINOv2's weights
+  use_unet: True #using ViT-UNet hybrid if True. using linear head otherwise
+  num_classes: 50 #number of classes to predict
+
+
+training:
+  batch_size: 25
+  crop_size: 224
+  lr: 5.0e-3
+  min_lr: 1e-8
+  patience: 3 #patience in scheduler
+  factor: 0.4 #factor in scheduler
+  weight_decay: 0.05
+  max_epochs: 100
+  early_stop: 10
+  steps_per_epoch: 100
+  epochs_warmup: 10
+  epochs: 500
+  steps_per_epoch_val: 50
+
+
+checkpoint:
+  save_path: /save/path
+  pretrain_path: null #path to get pretrained backbone
+  name: dst_1
+  saving_thr: 0.1
+  dinov2_checkpoint: False #True if you want to use DINOv2 as backbonexf
+
+
+data:
+  data_path: /data/path/nyu_depth

@@ -1,0 +1,46 @@
+model:
+  size: small
+  patch_size: 14 #patch size form tokenizer
+  hidden_size: 384 #token dimension
+  mlp_ratio: 4
+  num_attention_heads: 6
+  num_hidden_layers: 12
+  qkv_bias: True
+  num_blocks: 2
+  rmlp: True
+  amplitude: 5 #amplitude for RMLP
+  use_dinov2: True #initializing with DINOv2's weights. If False, training will be from scratch
+
+
+training:
+  batch_size: 32
+  crop_size: 224 #size of global views in DINO loss
+  local_size: 96 #size of local views in DINO loss
+  lr: 1e-7 #learning rate
+  min_lr: 1e-8 #minimum learning rate
+  patience: 3 #patience in scheduler
+  factor: 0.4 #factor in scheduler
+  weight_decay: 0.05
+  max_epochs: 100
+  dino_coef: 1. #coefficient for DINO loss during training
+  ibot_coef: 1. #coefficient for iBOT loss during training
+  koleo_coef: 0.5 #coefficient for KoLeo regularizer during training
+  early_stop: 10 #size of plateau for stopping
+  tps_0: 0.1 #initial student temperature
+  tpt_0: 0.04 #initial teacher temperature
+  tps_f: 0.15 #final student temperature
+  tpt_f: 0.07 #final teacher temperature
+  center_momentum: 0.9
+  teacher_momentum: 0.994 #teacher momentum for ema learning
+  steps_per_epoch: 100
+  epochs_warmup: 10
+  epochs: 500
+  steps_per_epoch_val: 50
+
+
+checkpoint:
+  save_path: .
+  pretrain_path: null #if not null, the model will initialize with the weights in this path. Ignore it if using DINOv2 as initialization
+  name: model_1
+  saving_thr: 0.1 #minimum improvement for saving
+
