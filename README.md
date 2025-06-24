@@ -29,7 +29,7 @@ Provided values were the ones used in our paper.
 For training for depth estimation, you can run
 
 ```
-python3 your_script.py /path/to/your/dst.yaml
+python3 dst_depth.py /path/to/your/dst.yaml
 ```
 The script will train the task and evaluate on the metrics you specified in the script.
 Same as with the backbone's configuration file, make sure to change the values to your needs.
