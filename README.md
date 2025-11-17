@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the implementation used in the paper titled "Randomized-MLP Regularization Improves Domain Adaptation and Interpretability in DINOv2".
+This repository contains the implementation used in the paper titled "Randomized-MLP Regularization Improves Domain Adaptation and Interpretability in DINOv2", whose preprint you can find [here](https://arxiv.org/abs/2511.05509).
 You will find here the required code to fine-tune DINOv2 model using RMLPs, as well as the linear heads we used for downstream tasks as well as the ViT-UNet hybrid. 
 We only include the code for learning depth estimation task on natural images, but the remaining ones are analogous.
 
@@ -35,9 +35,22 @@ The script will train the task and evaluate on the metrics you specified in the 
 Same as with the backbone's configuration file, make sure to change the values to your needs.
 Values in provided file are the ones used in the our paper.
 
+## Weights
 
-# License
+You can find the weights for the models we trained in the paper result of fine-tuning DINOv2-S to the given modality.
+
+| Modality | Weights                                                                                  | 
+|----------|------------------------------------------------------------------------------------------|
+| Natural  | [DINOv2-S + R$_5$-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/WRw8Rf6HDbnrMFG) |
+| OCT      | [DINOv2-S + R$_5$-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/tiBGinBA3Desibg) | 
+| CFP      | [DINOv2-S + R$_5$-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/PzstGnjSwLy5XEo) |                                                                | 
+
+
+
+## License
 
 This repository is licensed under the CC BY 4.0 License. See the LICENSE file for more details.
+
+
 
 
