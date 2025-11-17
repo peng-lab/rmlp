@@ -39,11 +39,11 @@ Values in provided file are the ones used in the our paper.
 
 You can find the weights for the models we trained in the paper result of fine-tuning DINOv2-S to the given modality.
 
-| Modality | Weights                                                                                  | 
-|----------|------------------------------------------------------------------------------------------|
-| Natural  | [DINOv2-S + R$_5$-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/WRw8Rf6HDbnrMFG) |
-| OCT      | [DINOv2-S + R$_5$-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/tiBGinBA3Desibg) | 
-| CFP      | [DINOv2-S + R$_5$-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/PzstGnjSwLy5XEo) |                                                                | 
+| Modality | Weights                                                                                          | 
+|----------|--------------------------------------------------------------------------------------------------|
+| Natural  | [DINOv2-S + R<sub>5</sub>-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/WRw8Rf6HDbnrMFG) |
+| OCT      | [DINOv2-S + R<sub>5</sub>-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/tiBGinBA3Desibg)         | 
+| CFP      | [DINOv2-S + R<sub>5</sub>-MLP](https://hmgubox2.helmholtz-munich.de/index.php/s/PzstGnjSwLy5XEo)         |                                                                | 
 
 
 
